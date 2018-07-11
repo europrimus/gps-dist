@@ -20,7 +20,8 @@ function getDistance(p1, p2) {
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(distance);
+        //navigator.geolocation.getCurrentPosition(distance);
+        navigator.geolocation.watchPosition(distance);
     } else {
         console.warn("navigator.geolocation error");
     }
@@ -33,7 +34,7 @@ function distance(position){
     destination = jQuery(this).data("gps");
     console.log(destination);
     dist = getDistance(destination, [position.coords.latitude, position.coords.longitude])
-    jQuery(this).text( dist.toLocaleString( undefined,  { minimumFractionDigits: 2 } )+" m" );
+    jQuery(this).text( dist.toLocaleString( undefined,  { minimumFractionDigits: 2 } )+" m ("+position.coords.accuracy+"m)" );
     }
   )
 }
