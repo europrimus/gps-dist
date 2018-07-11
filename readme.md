@@ -4,10 +4,10 @@ Calculate distance from localisation data to GPS point.
 Need jQuery t work
 add atribute **data-gps** to a span or other.
 
-    &lt;span data-gps="[47.3983,5.0898]" >&lt;/span>
+    <span data-gps="[47.3983,5.0898]" ></span>
 
-add under the jQuery script or before the &lt;/body>
+add this line hunder the jQuery script or before the ```</body>```
 
-    &lt;script src="gps_dist.js">&lt;/script>
+    <script src="gps_dist.js">&lt;/script>
 
 see [exemple](exemple.html)
