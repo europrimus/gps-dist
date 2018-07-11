@@ -32,7 +32,7 @@ function distance(position){
   $coord = jQuery("[data-gps]");
   $coord.each( function(){
     destination = jQuery(this).data("gps");
-    console.log(destination);
+    //console.log(destination);
     dist = getDistance(destination, [position.coords.latitude, position.coords.longitude])
     jQuery(this).text( dist.toLocaleString( undefined,  { minimumFractionDigits: 2 } )+" m ("+position.coords.accuracy+"m)" );
     }
